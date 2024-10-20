@@ -1,0 +1,223 @@
+<html><head><base href="/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InternetPro - Internet Plans</title>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  nav {
+    background-color: #004080;
+    padding: 10px 0;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    margin: 0 15px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  nav ul li a:hover {
+    color: #ffd700;
+  }
+  .plans-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin: 40px auto;
+  }
+  .plans-container h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+  }
+  .plans {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .plan {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 15px;
+    width: calc(33.33% - 30px);
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  .plan::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+  }
+  .plan:hover::before {
+    top: 100%;
+    left: 100%;
+  }
+  .plan h3 {
+    color: #003366;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  .plan-price {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #004080;
+    margin: 20px 0;
+  }
+  .plan-speed {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  .plan-features {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+  }
+  .plan-features li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+  }
+  .plan-features li::before {
+    content: '✓';
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+  .btn {
+    background-color: #004080;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #003366;
+  }
+  @media (max-width: 768px) {
+    .plan {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>InternetPro Customer Portal</h1>
+    </div>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#plans">Internet Plans</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="plans-container">
+      <h2>Choose Your Perfect Internet Plan</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>Basic Plan</h3>
+          <div class="plan-price">₱999</div>
+          <div class="plan-speed">15 Mbps Upload and Download</div>
+          <ul class="plan-features">
+            <li>Ideal for small households</li>
+            <li>Stream HD content</li>
+            <li>Browse and email with ease</li>
+            <li>24/7 customer support</li>
+          </ul>
+          <button class="btn">Select Basic Plan</button>
+        </div>
+        <div class="plan">
+          <h3>Standard Plan</h3>
+          <div class="plan-price">₱1,299</div>
+          <div class="plan-speed">20 Mbps Upload and Download</div>
+          <ul class="plan-features">
+            <li>Perfect for medium-sized households</li>
+            <li>Stream 4K content</li>
+            <li>Smooth online gaming experience</li>
+            <li>Priority customer support</li>
+          </ul>
+          <button class="btn">Select Standard Plan</button>
+        </div>
+        <div class="plan">
+          <h3>Premium Plan</h3>
+          <div class="plan-price">₱1,499</div>
+          <div class="plan-speed">25 Mbps Upload and Download</div>
+          <ul class="plan-features">
+            <li>Ideal for large households</li>
+            <li>Stream 4K content on multiple devices</li>
+            <li>Lag-free online gaming</li>
+            <li>VIP customer support</li>
+          </ul>
+          <button class="btn">Select Premium Plan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('click', function() {
+        const plan = this.parentElement.querySelector('h3').textContent;
+        alert(`You've selected the ${plan}. Please log in or sign up to complete your subscription.`);
+        // Here you would typically redirect to a signup/login page or open a modal
+        window.location.href = '/signup?plan=' + encodeURIComponent(plan);
+      });
+    });
+  </script>
+</body></html>
